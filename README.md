@@ -1,4 +1,4 @@
-# systeme-alertes-symbolitech
+# symbolitech-alert-system
 
 ### Description:
 This script allows you to be notified in a mattermost channel whenever one of your websites goes down or back up.
