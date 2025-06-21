@@ -1,15 +1,17 @@
-# symbolitech-alert-system
+# Symbolitech | Système d'alertes Mattermost
 
 ### Description:
-This script allows you to be notified in a mattermost channel whenever one of your websites goes down or back up.
+Ce script permet d'être notifié sur une chaîne Mattermost chaque fois qu'un site web tombe en panne ou est de nouveau opérationnel.
 
-There is a built-in function that makes sure a site is really down when the response is not 200 (or redirect) by checking once and then waiting 2 minutes before checking again.
+Le script effectu une vérification puis notifie l'état du site dans Mattermost.
 
-The mattermost user is called Alert Dog and uses [this avatar](https://web.archive.org/web/20090829012411if_/http://geocities.com/odriscolll/spacedog.gif). You can easily change the name and avatar in the code.
+Si la réponse n'est pas 200, il refait la vérification après un délai de 2 minutes avant de notifier dans Mattermost.
 
-### Recommended cron job:
+L'utilisateur Mattermost s'appelle Alerte Fido et utilise [cet avatar](https://web.archive.org/web/20090829012411if_/http://geocities.com/odriscolll/spacedog.gif).
+
+### Exemple de cron job:
 ```*/5 * * * * python3 /path/to/script/main.py > /path/to/script/logs```
 
-### To use the script:
-- Add a list of urls in main.py
-- Add a mattermost webhook in functions.py
+### Usage:
+- Ajouter une liste de urls dans main.py
+- Ajouter un webhook mattermost dans functions.py
